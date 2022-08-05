@@ -26,9 +26,28 @@ The idea of this simple application is to allow users to apply to jobs and manag
 
 There are currently 3 models
 
-User (has many job applications)
-Job (needs to generate a unique slug when created)
-Job Application (belongs to a user and a job)
+User
+
+```
+Authentication
+has many job applications
+```
+
+Job
+
+```
+Contains job details
+(needs to generate a unique slug when created)
+Needs the implementation of status: open, closed, draft
+```
+
+Job Application
+
+```
+belongs to a user and a job
+has a status
+Needs the implementation of status: applied, reviewed, rejected, withdrawn
+```
 
 We have a few pages on the app that need to be completed
 
@@ -37,18 +56,22 @@ We have a few pages on the app that need to be completed
 > Lists the current jobs from the api
 > Has a link to view the job
 > Does not require the user to be logged in
+> Should only list open jobs
 
 # Applications
 
 > Should list the current applications for the logged in user
 > Requires the user to be logged in
+> Should allow the user to update their status
 > Should allow the user to delete their job application (which updates the status)
 
 # Job
 
 > Should display the job (in a slightly nicer fashion)
+> Should display the date it was created in a nice format
 > Have a button to allow the user to apply for the job
 > Should tell the user if they have applied previously
+> Should allow anyone to update the status (they can close, open or draft the job). Ignore the permissions, authorization of this
 
 # Specs
 
@@ -59,6 +82,8 @@ Please attempt to implement any needed changes to get the tests to pass, and add
 
 - There are no loading states in the app
 - How are we handling any errors?
+
+-
 
 # Discussion Questions (please edit the readme and add)
 
