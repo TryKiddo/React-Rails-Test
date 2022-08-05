@@ -85,18 +85,14 @@ Please attempt to implement any needed changes to get the tests to pass, and add
 - There are no loading states in the app
 - How are we handling any errors?
 
--
-
-# Discussion Questions (please edit the readme and add)
-
-- How would you change the current implementation if we had 10,000 jobs
-
 # Extra Credit
 
 - Allow anyone to create a simple job meeting the minimum requirements (permissions don't matter)
 - Add the ability for jobs to have questions that must be answered as part of the application process
 - Make it look nicer!
 - Filters for job status
+- Add a banner image for jobs
+- Paginate the jobs/applications
 
 # Random notes
 
